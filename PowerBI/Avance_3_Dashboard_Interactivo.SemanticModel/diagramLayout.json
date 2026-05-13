@@ -1,0 +1,125 @@
+{
+  "version": "1.1.0",
+  "diagrams": [
+    {
+      "ordinal": 0,
+      "scrollPosition": {
+        "x": 631.57279841605964,
+        "y": 311.91170472775565
+      },
+      "nodes": [
+        {
+          "location": {
+            "x": 667.042742152404,
+            "y": 186.59232790287268
+          },
+          "nodeIndex": "Ciudades",
+          "nodeLineageTag": "1fae114c-8be7-449a-9ffc-d26d651791d0",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 4
+        },
+        {
+          "location": {
+            "x": 1047.82676907396,
+            "y": 785.05142641146722
+          },
+          "nodeIndex": "Clientes",
+          "nodeLineageTag": "a3b1fb75-2ed8-4b15-b29d-e1d824d9d076",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 1
+        },
+        {
+          "location": {
+            "x": 1868.3581834934523,
+            "y": 364.10886488437274
+          },
+          "nodeIndex": "DetalleFacturas",
+          "nodeLineageTag": "e0ade367-0caa-4a11-b826-251173448d99",
+          "size": {
+            "height": 248,
+            "width": 234
+          },
+          "zIndex": 7
+        },
+        {
+          "location": {
+            "x": 1992.9431519171155,
+            "y": 743.07128285359511
+          },
+          "nodeIndex": "Productos",
+          "nodeLineageTag": "385b8392-09d3-4c4d-b17f-feeffc8c462b",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 5
+        },
+        {
+          "location": {
+            "x": 1050.3004533826904,
+            "y": 363.55202374260239
+          },
+          "nodeIndex": "Sucursales",
+          "nodeLineageTag": "8062d66e-eb84-4d0e-821d-c9ab409513e7",
+          "size": {
+            "height": 152,
+            "width": 234
+          },
+          "zIndex": 2
+        },
+        {
+          "location": {
+            "x": 1057.4075102533664,
+            "y": 153.18294507049717
+          },
+          "nodeIndex": "Vendedores",
+          "nodeLineageTag": "591f8ce1-a016-4dec-bc77-9ec825245e28",
+          "size": {
+            "height": 128,
+            "width": 234
+          },
+          "zIndex": 3
+        },
+        {
+          "location": {
+            "x": 687.28631556084383,
+            "y": 506.06341641014023
+          },
+          "nodeIndex": "Metricas",
+          "nodeLineageTag": "4e52ffb2-959c-4fb3-9f10-e68dcbc41f29",
+          "size": {
+            "height": 200,
+            "width": 234
+          },
+          "zIndex": 8
+        },
+        {
+          "location": {
+            "x": 1500.2650944057023,
+            "y": 340.9952223606507
+          },
+          "nodeIndex": "Facturas",
+          "size": {
+            "height": 300,
+            "width": 234
+          },
+          "zIndex": 6
+        }
+      ],
+      "name": "Todas las tablas",
+      "zoomValue": 63.528824378130267,
+      "pinKeyFieldsToTop": false,
+      "showExtraHeaderInfo": false,
+      "hideKeyFieldsWhenCollapsed": false,
+      "tablesLocked": false
+    }
+  ],
+  "selectedDiagram": "Todas las tablas",
+  "defaultDiagram": "Todas las tablas"
+}

@@ -1,0 +1,123 @@
+table Facturas
+	lineageTag: 0e274eed-e55a-4d2e-8b0e-61a51a1e9420
+
+	column FacturaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 5c07b159-a30e-4046-9dbf-10b238246339
+		summarizeBy: none
+		sourceColumn: FacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e61b984-3cf4-418f-826f-672035dac547
+		summarizeBy: sum
+		sourceColumn: Dia
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: a1df8be9-3f02-424c-827f-55d0889d6ce7
+		summarizeBy: none
+		sourceColumn: Mes
+
+		annotation SummarizationSetBy = Automatic
+
+	column Anio
+		dataType: int64
+		formatString: 0
+		lineageTag: b89c50f9-f124-44e5-bdbf-3d5ab6b64d11
+		summarizeBy: sum
+		sourceColumn: Anio
+
+		annotation SummarizationSetBy = Automatic
+
+	column HoraVenta
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: f78f8f17-e102-4875-8a40-fac1f21bab62
+		summarizeBy: none
+		sourceColumn: HoraVenta
+
+		variation Variación
+			isDefault
+			relationship: 59bb0053-aa9f-45d1-97e8-92add9c5c946
+			defaultHierarchy: LocalDateTable_fb60c0c5-c023-4872-9e6c-9eaa5726bf98.'Jerarquía de fechas'
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetodoPago
+		dataType: string
+		lineageTag: b414de08-cb26-4df9-8bfd-7505366b6dff
+		summarizeBy: none
+		sourceColumn: MetodoPago
+
+		annotation SummarizationSetBy = Automatic
+
+	column SucursalID
+		dataType: int64
+		formatString: 0
+		lineageTag: 7bb157b0-157d-407e-8c68-6477e89178a8
+		summarizeBy: none
+		sourceColumn: SucursalID
+
+		annotation SummarizationSetBy = Automatic
+
+	column VendedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: 59146e28-27a4-4771-acb5-d07c64ae9e45
+		summarizeBy: none
+		sourceColumn: VendedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClienteID
+		dataType: int64
+		formatString: 0
+		lineageTag: 48c4b953-5a7d-4742-b0f4-bd97ee4b1438
+		summarizeBy: none
+		sourceColumn: ClienteID
+
+		annotation SummarizationSetBy = Automatic
+
+	column DescuentoVenta
+		dataType: double
+		lineageTag: d5c5115a-3782-41fb-96f8-9f89ffb5bfb2
+		summarizeBy: sum
+		sourceColumn: DescuentoVenta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalVenta
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 704363d8-6209-4850-b2ef-13d0ddf0d5ea
+		summarizeBy: sum
+		sourceColumn: TotalVenta
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	partition Facturas = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Facturas_Sheet = Origen{[Item="Facturas",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Facturas_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"FacturaID", Int64.Type}, {"Dia", Int64.Type}, {"Mes", type text}, {"Anio", Int64.Type}, {"HoraVenta", type datetime}, {"MetodoPago", type text}, {"SucursalID", Int64.Type}, {"VendedorID", Int64.Type}, {"ClienteID", Int64.Type}, {"DescuentoVenta", Percentage.Type}, {"TotalVenta", Currency.Type}})
+				in
+				    #"Tipo cambiado"
+
+	changedProperty = Name
+
+	annotation PBI_ResultType = Table
+

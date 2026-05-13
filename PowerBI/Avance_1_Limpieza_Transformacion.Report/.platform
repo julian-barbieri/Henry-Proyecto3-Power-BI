@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Avance_1_Limpieza_Transformacion"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "81113ab9-b0e5-434f-a29d-a763bed53f72"
+  }
+}

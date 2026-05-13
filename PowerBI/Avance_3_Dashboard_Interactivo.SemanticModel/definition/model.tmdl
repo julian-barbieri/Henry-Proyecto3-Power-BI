@@ -1,0 +1,27 @@
+model Model
+	culture: es-AR
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: en-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["Ciudades","Clientes","DetalleFacturas","Productos","Sucursales","Vendedores","Facturas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table Ciudades
+ref table Clientes
+ref table DetalleFacturas
+ref table Productos
+ref table Sucursales
+ref table Vendedores
+ref table Metricas
+ref table Facturas
+ref table DateTableTemplate_15e056f3-c3a6-44ed-867a-37d8e3bb9618
+ref table LocalDateTable_fb60c0c5-c023-4872-9e6c-9eaa5726bf98
+
+ref cultureInfo es-AR
+

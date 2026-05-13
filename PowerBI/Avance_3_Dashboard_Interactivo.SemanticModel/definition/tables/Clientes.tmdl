@@ -1,0 +1,74 @@
+table Clientes
+	lineageTag: a3b1fb75-2ed8-4b15-b29d-e1d824d9d076
+
+	column ClienteID
+		dataType: int64
+		formatString: 0
+		lineageTag: dbd11ea0-fef6-46af-bdb3-977e26773c37
+		summarizeBy: none
+		sourceColumn: ClienteID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClienteNombre
+		dataType: string
+		lineageTag: 24e58137-3db9-4771-90db-54e374389b61
+		summarizeBy: none
+		sourceColumn: ClienteNombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeneroCliente
+		dataType: string
+		lineageTag: e75bc11e-39f0-4b43-a24a-169e7843e73f
+		summarizeBy: none
+		sourceColumn: GeneroCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column EdadCliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 0e7f42df-75c9-4036-b2d1-016bd8e9a86b
+		summarizeBy: none
+		sourceColumn: EdadCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailCliente
+		dataType: string
+		lineageTag: b6e08e9e-b90b-450d-892c-94104356eac7
+		summarizeBy: none
+		sourceColumn: EmailCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column TelefonoCliente
+		dataType: string
+		lineageTag: 1fff6a8b-4aa1-4490-8b77-6415e50271e7
+		summarizeBy: none
+		sourceColumn: TelefonoCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	column DireccionCliente
+		dataType: string
+		lineageTag: 28e60e36-6aee-4ab5-bfd9-41d13b2160b2
+		summarizeBy: none
+		sourceColumn: DireccionCliente
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Clientes = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Clientes_Sheet = Origen{[Item="Clientes",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Clientes_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ClienteID", Int64.Type}, {"ClienteNombre", type text}, {"GeneroCliente", type text}, {"EdadCliente", Int64.Type}, {"EmailCliente", type text}, {"TelefonoCliente", type text}, {"DireccionCliente", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

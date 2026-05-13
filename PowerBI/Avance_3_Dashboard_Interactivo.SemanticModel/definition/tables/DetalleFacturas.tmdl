@@ -1,0 +1,79 @@
+table DetalleFacturas
+	lineageTag: e0ade367-0caa-4a11-b826-251173448d99
+
+	column DetalleID
+		dataType: int64
+		formatString: 0
+		lineageTag: 4cdf89a3-8344-4fb8-98e4-0a2dc71525b9
+		summarizeBy: count
+		sourceColumn: DetalleID
+
+		annotation SummarizationSetBy = Automatic
+
+	column FacturaID
+		dataType: int64
+		formatString: 0
+		lineageTag: cc31ae2d-4905-4b60-aa46-5e1095bed358
+		summarizeBy: none
+		sourceColumn: FacturaID
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductoNro
+		dataType: int64
+		formatString: 0
+		lineageTag: 5008567b-8ce7-44ef-be15-06c0c5c4c0ad
+		summarizeBy: sum
+		sourceColumn: ProductoNro
+
+		annotation SummarizationSetBy = Automatic
+
+	column ProductoID
+		dataType: int64
+		formatString: 0
+		lineageTag: 2aac2b68-5b33-4a3b-a051-df9c9a6cd162
+		summarizeBy: none
+		sourceColumn: ProductoID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Cantidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 8be73976-47b1-47a3-ae21-2cc95adf7c9a
+		summarizeBy: sum
+		sourceColumn: Cantidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrecioUnitario
+		dataType: int64
+		formatString: 0
+		lineageTag: 28a2fb34-899f-4214-b313-619e7e586f57
+		summarizeBy: sum
+		sourceColumn: PrecioUnitario
+
+		annotation SummarizationSetBy = Automatic
+
+	column Subtotal
+		dataType: int64
+		formatString: 0
+		lineageTag: 158c207f-5f86-4f36-b914-0d22fd461f0b
+		summarizeBy: sum
+		sourceColumn: Subtotal
+
+		annotation SummarizationSetBy = Automatic
+
+	partition DetalleFacturas = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    DetalleFacturas_Sheet = Origen{[Item="DetalleFacturas",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(DetalleFacturas_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"DetalleID", Int64.Type}, {"FacturaID", Int64.Type}, {"ProductoNro", Int64.Type}, {"ProductoID", Int64.Type}, {"Cantidad", Int64.Type}, {"PrecioUnitario", Int64.Type}, {"Subtotal", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

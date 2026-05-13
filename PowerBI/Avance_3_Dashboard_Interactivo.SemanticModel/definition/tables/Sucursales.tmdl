@@ -1,0 +1,42 @@
+table Sucursales
+	lineageTag: 8062d66e-eb84-4d0e-821d-c9ab409513e7
+
+	column SucursalID
+		dataType: int64
+		formatString: 0
+		lineageTag: 880eb5fb-1619-4689-8a7a-331afbc6bb66
+		summarizeBy: none
+		sourceColumn: SucursalID
+
+		annotation SummarizationSetBy = Automatic
+
+	column SucursalNombre
+		dataType: string
+		lineageTag: 4807fcaf-81c3-4289-b6da-3e165a64e421
+		summarizeBy: none
+		sourceColumn: SucursalNombre
+
+		annotation SummarizationSetBy = Automatic
+
+	column CiudadID
+		dataType: int64
+		formatString: 0
+		lineageTag: 42381000-9085-4fec-9a87-81ce0fb3d00b
+		summarizeBy: none
+		sourceColumn: CiudadID
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Sucursales = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Sucursales_Sheet = Origen{[Item="Sucursales",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Sucursales_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"SucursalID", Int64.Type}, {"SucursalNombre", type text}, {"CiudadID", Int64.Type}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

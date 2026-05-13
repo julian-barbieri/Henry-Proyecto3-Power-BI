@@ -1,0 +1,33 @@
+table Vendedores
+	lineageTag: 591f8ce1-a016-4dec-bc77-9ec825245e28
+
+	column VendedorID
+		dataType: int64
+		formatString: 0
+		lineageTag: d0acc130-a787-4428-9e05-faf63e57fca7
+		summarizeBy: none
+		sourceColumn: VendedorID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Vendedor
+		dataType: string
+		lineageTag: 34f828b6-5044-455e-9016-2439fe55a6da
+		summarizeBy: none
+		sourceColumn: Vendedor
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Vendedores = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Vendedores_Sheet = Origen{[Item="Vendedores",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Vendedores_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"VendedorID", Int64.Type}, {"Vendedor", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

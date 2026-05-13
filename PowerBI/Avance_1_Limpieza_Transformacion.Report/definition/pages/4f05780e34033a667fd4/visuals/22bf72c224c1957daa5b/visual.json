@@ -1,0 +1,884 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
+  "name": "22bf72c224c1957daa5b",
+  "position": {
+    "x": 11.042415528396837,
+    "y": 0,
+    "z": 0,
+    "height": 563.1631919482387,
+    "width": 1269.8777857656362,
+    "tabOrder": 0
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "Año"
+                }
+              },
+              "queryRef": "ventas.Año",
+              "nativeQueryRef": "Año"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "CantidadProducto2"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.CantidadProducto2)",
+              "nativeQueryRef": "Suma de CantidadProducto2"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "CantidadProducto1"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.CantidadProducto1)",
+              "nativeQueryRef": "Suma de CantidadProducto1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "CantidadProducto3"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.CantidadProducto3)",
+              "nativeQueryRef": "Suma de CantidadProducto3"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "CiudadSucursal"
+                }
+              },
+              "queryRef": "ventas.CiudadSucursal",
+              "nativeQueryRef": "CiudadSucursal"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "ClienteNombre"
+                }
+              },
+              "queryRef": "ventas.ClienteNombre",
+              "nativeQueryRef": "ClienteNombre"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "DescuentoVenta"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.DescuentoVenta)",
+              "nativeQueryRef": "Suma de DescuentoVenta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "Dia"
+                }
+              },
+              "queryRef": "ventas.Dia",
+              "nativeQueryRef": "Dia"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "DireccionCliente"
+                }
+              },
+              "queryRef": "ventas.DireccionCliente",
+              "nativeQueryRef": "DireccionCliente"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "EdadCliente"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.EdadCliente)",
+              "nativeQueryRef": "Suma de EdadCliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "EmailCliente"
+                }
+              },
+              "queryRef": "ventas.EmailCliente",
+              "nativeQueryRef": "EmailCliente"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "ventas"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "FechaVenta"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Año"
+                }
+              },
+              "queryRef": "ventas.FechaVenta.Variación.Jerarquía de fechas.Año",
+              "nativeQueryRef": "FechaVenta Año"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "ventas"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "FechaVenta"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Trimestre"
+                }
+              },
+              "queryRef": "ventas.FechaVenta.Variación.Jerarquía de fechas.Trimestre",
+              "nativeQueryRef": "FechaVenta Trimestre"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "ventas"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "FechaVenta"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Mes"
+                }
+              },
+              "queryRef": "ventas.FechaVenta.Variación.Jerarquía de fechas.Mes",
+              "nativeQueryRef": "FechaVenta Mes"
+            },
+            {
+              "field": {
+                "HierarchyLevel": {
+                  "Expression": {
+                    "Hierarchy": {
+                      "Expression": {
+                        "PropertyVariationSource": {
+                          "Expression": {
+                            "SourceRef": {
+                              "Entity": "ventas"
+                            }
+                          },
+                          "Name": "Variación",
+                          "Property": "FechaVenta"
+                        }
+                      },
+                      "Hierarchy": "Jerarquía de fechas"
+                    }
+                  },
+                  "Level": "Día"
+                }
+              },
+              "queryRef": "ventas.FechaVenta.Variación.Jerarquía de fechas.Día",
+              "nativeQueryRef": "FechaVenta Día"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "GeneroCliente"
+                }
+              },
+              "queryRef": "ventas.GeneroCliente",
+              "nativeQueryRef": "GeneroCliente"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "HoraVenta"
+                }
+              },
+              "queryRef": "ventas.HoraVenta",
+              "nativeQueryRef": "HoraVenta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "MarcaProducto1"
+                }
+              },
+              "queryRef": "ventas.MarcaProducto1",
+              "nativeQueryRef": "MarcaProducto1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "MarcaProducto2"
+                }
+              },
+              "queryRef": "ventas.MarcaProducto2",
+              "nativeQueryRef": "MarcaProducto2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "MarcaProducto3"
+                }
+              },
+              "queryRef": "ventas.MarcaProducto3",
+              "nativeQueryRef": "MarcaProducto3"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "Mes"
+                }
+              },
+              "queryRef": "ventas.Mes",
+              "nativeQueryRef": "Mes"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "MetodoPago"
+                }
+              },
+              "queryRef": "ventas.MetodoPago",
+              "nativeQueryRef": "MetodoPago"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "NombreProducto1"
+                }
+              },
+              "queryRef": "ventas.NombreProducto1",
+              "nativeQueryRef": "NombreProducto1"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "NombreProducto2"
+                }
+              },
+              "queryRef": "ventas.NombreProducto2",
+              "nativeQueryRef": "NombreProducto2"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "NombreProducto3"
+                }
+              },
+              "queryRef": "ventas.NombreProducto3",
+              "nativeQueryRef": "NombreProducto3"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "PrecioUnitarioProducto1"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.PrecioUnitarioProducto1)",
+              "nativeQueryRef": "Suma de PrecioUnitarioProducto1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "PrecioUnitarioProducto2"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.PrecioUnitarioProducto2)",
+              "nativeQueryRef": "Suma de PrecioUnitarioProducto2"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "PrecioUnitarioProducto3"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.PrecioUnitarioProducto3)",
+              "nativeQueryRef": "Suma de PrecioUnitarioProducto3"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "SubtotalProducto1"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.SubtotalProducto1)",
+              "nativeQueryRef": "Suma de SubtotalProducto1"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "SubtotalProducto2"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.SubtotalProducto2)",
+              "nativeQueryRef": "Suma de SubtotalProducto2"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "SubtotalProducto3"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.SubtotalProducto3)",
+              "nativeQueryRef": "Suma de SubtotalProducto3"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "SucursalNombre"
+                }
+              },
+              "queryRef": "ventas.SucursalNombre",
+              "nativeQueryRef": "SucursalNombre"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "TelefonoCliente"
+                }
+              },
+              "queryRef": "ventas.TelefonoCliente",
+              "nativeQueryRef": "TelefonoCliente"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "ventas"
+                        }
+                      },
+                      "Property": "TotalVenta"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(ventas.TotalVenta)",
+              "nativeQueryRef": "Suma de TotalVenta"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "ventas"
+                    }
+                  },
+                  "Property": "VendedorNombre"
+                }
+              },
+              "queryRef": "ventas.VendedorNombre",
+              "nativeQueryRef": "VendedorNombre"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Aggregation": {
+                "Expression": {
+                  "Column": {
+                    "Expression": {
+                      "SourceRef": {
+                        "Entity": "ventas"
+                      }
+                    },
+                    "Property": "TotalVenta"
+                  }
+                },
+                "Function": 0
+              }
+            },
+            "direction": "Ascending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "f7c95a7def1e99d18b72",
+        "displayName": "CantidadProducto2",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "CantidadProducto2"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "890ef253240959deda50",
+        "displayName": "CantidadProducto1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "CantidadProducto1"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "539312fca3156448c270",
+        "displayName": "CantidadProducto3",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "CantidadProducto3"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "0810aa69285108b54bee",
+        "displayName": "DescuentoVenta",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "DescuentoVenta"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d025743b4a7e64c09b60",
+        "displayName": "EdadCliente",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "EdadCliente"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "d450948957a2520f1a18",
+        "displayName": "PrecioUnitarioProducto1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "PrecioUnitarioProducto1"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "7013ce12d8f102ad7a55",
+        "displayName": "PrecioUnitarioProducto2",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "PrecioUnitarioProducto2"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "c9e1e00230b0c64e539b",
+        "displayName": "PrecioUnitarioProducto3",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "PrecioUnitarioProducto3"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "4a3a226cf734e8dea16d",
+        "displayName": "SubtotalProducto1",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "SubtotalProducto1"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "cdf2af0d3d2efe544892",
+        "displayName": "SubtotalProducto2",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "SubtotalProducto2"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "b96830aded46ed7ec1cb",
+        "displayName": "SubtotalProducto3",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "SubtotalProducto3"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      },
+      {
+        "name": "83fd78b0539c412ddcd2",
+        "displayName": "TotalVenta",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "ventas"
+                  }
+                },
+                "Property": "TotalVenta"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}

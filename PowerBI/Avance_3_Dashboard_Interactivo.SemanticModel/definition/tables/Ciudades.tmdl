@@ -1,0 +1,33 @@
+table Ciudades
+	lineageTag: 1fae114c-8be7-449a-9ffc-d26d651791d0
+
+	column CiudadID
+		dataType: int64
+		formatString: 0
+		lineageTag: 8dcd9a8d-cf10-401b-863a-baa9bd45c381
+		summarizeBy: none
+		sourceColumn: CiudadID
+
+		annotation SummarizationSetBy = Automatic
+
+	column Ciudad
+		dataType: string
+		lineageTag: 3f6f35c7-304c-4496-bfe7-17013e7cf047
+		summarizeBy: none
+		sourceColumn: Ciudad
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Ciudades = m
+		mode: import
+		source =
+				let
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Ciudades_Sheet = Origen{[Item="Ciudades",Kind="Sheet"]}[Data],
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Ciudades_Sheet, [PromoteAllScalars=true]),
+				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"CiudadID", Int64.Type}, {"Ciudad", type text}})
+				in
+				    #"Tipo cambiado"
+
+	annotation PBI_ResultType = Table
+

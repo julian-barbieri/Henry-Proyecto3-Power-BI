@@ -1,0 +1,68 @@
+table Metricas
+	lineageTag: 4e52ffb2-959c-4fb3-9f10-e68dcbc41f29
+
+	measure 'Ventas Totales' = SUM ( DetalleFacturas[Subtotal])
+		formatString: 0
+		lineageTag: 362c65f4-5981-4075-b6fe-59de60bec3b0
+
+	measure 'Ticket Promedio' = ```
+			
+			DIVIDE (
+			    [Ventas Totales],
+			    DISTINCTCOUNT ( Facturas[facturaID] )
+			) 
+			```
+		lineageTag: 504df2d2-20ee-461f-9883-c6819f2514dd
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Importe Total' =
+			
+			SUM( DetalleFacturas[Subtotal] )
+		formatString: 0
+		lineageTag: 63489164-ee8b-4e82-95a7-f7f20b4ca71b
+
+	measure 'Margen $' =
+			
+			[Ventas Totales] - [Importe Total]
+		formatString: 0
+		lineageTag: 470dc629-1641-4d1c-b8fd-b687176e1d70
+
+	measure 'Margen %' =
+			
+			DIVIDE( [Margen $], [Ventas Totales] )
+		lineageTag: 8320250f-e7bd-470a-98c4-bbd004021451
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure '% Participación' =
+			
+			DIVIDE (
+			    [Ventas Totales],
+			    CALCULATE ( [Ventas Totales], ALL ( Ciudades ) )
+			)
+		lineageTag: a871b5fc-983b-4c1b-bf90-58e3300caffb
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	measure 'Cantidad Vendida' = sum(DetalleFacturas[Cantidad])
+		formatString: 0
+		lineageTag: 969a8e3d-f323-4ad1-88ee-c366969b0f9a
+
+	column Column
+		formatString: 0
+		lineageTag: ba73ebba-65d0-4a4e-a137-e37602f9d35f
+		summarizeBy: sum
+		isNameInferred
+		sourceColumn: [Column]
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Metricas = calculated
+		mode: import
+		source = Row("Column", BLANK())
+
+	annotation PBI_Id = 156d2b688d3f4e59b84a4f2f5d562c02
+
+	annotation 436ba87b-9c83-4389-a31b-ebd06a36be98 = {"Expression":""}
+

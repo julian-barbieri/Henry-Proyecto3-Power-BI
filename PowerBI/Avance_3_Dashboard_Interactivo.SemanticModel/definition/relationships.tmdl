@@ -1,0 +1,29 @@
+relationship AutoDetected_c9902520-9b32-4eae-ab32-f4bee44ec8dd
+	fromColumn: Sucursales.CiudadID
+	toColumn: Ciudades.CiudadID
+
+relationship AutoDetected_9cfc7be2-be78-4495-9a34-ea4c97077931
+	fromColumn: DetalleFacturas.ProductoID
+	toColumn: Productos.ProductoID
+
+relationship 59bb0053-aa9f-45d1-97e8-92add9c5c946
+	joinOnDateBehavior: datePartOnly
+	fromColumn: Facturas.HoraVenta
+	toColumn: LocalDateTable_fb60c0c5-c023-4872-9e6c-9eaa5726bf98.Date
+
+relationship AutoDetected_faaedc7f-6c07-4de1-b920-94c1434f6a49
+	fromColumn: Facturas.ClienteID
+	toColumn: Clientes.ClienteID
+
+relationship AutoDetected_5aac6725-d608-499a-925d-305a67bed340
+	fromColumn: Facturas.SucursalID
+	toColumn: Sucursales.SucursalID
+
+relationship AutoDetected_33b45254-6e3f-4a55-ad3c-1cd5dcbf3974
+	fromColumn: Facturas.VendedorID
+	toColumn: Vendedores.VendedorID
+
+relationship c667e191-e51a-403e-c20b-56eba2c79dd8
+	fromColumn: DetalleFacturas.FacturaID
+	toColumn: Facturas.FacturaID
+

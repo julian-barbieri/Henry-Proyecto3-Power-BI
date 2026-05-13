@@ -1,0 +1,423 @@
+table ventas
+	lineageTag: ceab4cf2-689d-4f48-9c4f-c96103a2f402
+
+	column VentaID
+		dataType: int64
+		formatString: 0
+		lineageTag: 1a5c6cb4-131e-4d23-b3d6-f8321d32e20e
+		summarizeBy: count
+		sourceColumn: VentaID
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column FechaVenta
+		dataType: dateTime
+		formatString: Long Date
+		lineageTag: 82d4e7d9-9854-4735-a90f-54d13bac508a
+		summarizeBy: none
+		sourceColumn: FechaVenta
+
+		variation Variación
+			isDefault
+			relationship: 8df1fb3c-9860-44e9-b556-b3801b923d5a
+			defaultHierarchy: LocalDateTable_d37d50df-de80-4dea-a0fa-80be2a72dd61.'Jerarquía de fechas'
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Date
+
+	column HoraVenta
+		dataType: dateTime
+		formatString: Long Time
+		lineageTag: 54ded8ce-f5fd-458b-82df-144f63d11e9b
+		summarizeBy: none
+		sourceColumn: HoraVenta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation UnderlyingDateTimeDataType = Time
+
+	column SucursalNombre
+		dataType: string
+		lineageTag: 422e69d2-a79a-440f-8ac9-f56744bb0572
+		summarizeBy: none
+		sourceColumn: SucursalNombre
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column VendedorNombre
+		dataType: string
+		lineageTag: e3f1e2f4-c1f7-4d34-8f9e-fa37974ba910
+		summarizeBy: none
+		sourceColumn: VendedorNombre
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column ClienteNombre
+		dataType: string
+		lineageTag: a291d17a-5522-4af2-b7dd-62c83c1ad58b
+		summarizeBy: none
+		sourceColumn: ClienteNombre
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column GeneroCliente
+		dataType: string
+		lineageTag: 42580047-eaf1-44e9-90f6-839c3a556866
+		summarizeBy: none
+		sourceColumn: GeneroCliente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EdadCliente
+		dataType: int64
+		formatString: 0
+		lineageTag: 1b64e33b-efb1-4f6c-82a6-8556f739c92a
+		summarizeBy: sum
+		sourceColumn: EdadCliente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column EmailCliente
+		dataType: string
+		lineageTag: 7ce6bc01-f433-4050-a3d1-437cf8e56736
+		summarizeBy: none
+		sourceColumn: EmailCliente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column TelefonoCliente
+		dataType: string
+		lineageTag: cfac42a2-add9-4599-9368-3e79502c79d5
+		summarizeBy: none
+		sourceColumn: TelefonoCliente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column DireccionCliente
+		dataType: string
+		lineageTag: 4ac90ccf-01db-40b7-aa4d-41b2d2f7cf99
+		summarizeBy: none
+		sourceColumn: DireccionCliente
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MetodoPago
+		dataType: string
+		lineageTag: 08b08d90-addf-4c64-8954-88c1372bfed4
+		summarizeBy: none
+		sourceColumn: MetodoPago
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column NombreProducto1
+		dataType: string
+		lineageTag: cd7995ef-7c76-4ca1-bda8-1d8bf4082c05
+		summarizeBy: none
+		sourceColumn: NombreProducto1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MarcaProducto1
+		dataType: string
+		lineageTag: 7da9c382-d734-41da-ac40-05d225a1a4dd
+		summarizeBy: none
+		sourceColumn: MarcaProducto1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadProducto1
+		dataType: int64
+		formatString: 0
+		lineageTag: 7c37b802-8cf1-44b3-94da-30b8ca66066a
+		summarizeBy: sum
+		sourceColumn: CantidadProducto1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column PrecioUnitarioProducto1
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: a8f1534e-e4a1-4e05-aec2-008814c4bea6
+		summarizeBy: sum
+		sourceColumn: PrecioUnitarioProducto1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column SubtotalProducto1
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 4f347a63-82d8-4143-a238-9fe4009f2cea
+		summarizeBy: sum
+		sourceColumn: SubtotalProducto1
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column NombreProducto2
+		dataType: string
+		lineageTag: 40511e6e-9b61-41e1-bcee-03938827fd4f
+		summarizeBy: none
+		sourceColumn: NombreProducto2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MarcaProducto2
+		dataType: string
+		lineageTag: 7142b46c-f0f8-483a-aced-4cc300cdd863
+		summarizeBy: none
+		sourceColumn: MarcaProducto2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadProducto2
+		dataType: double
+		lineageTag: e50d7f73-bb9c-48e7-8a9d-3230b738ea3b
+		summarizeBy: sum
+		sourceColumn: CantidadProducto2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrecioUnitarioProducto2
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: db4dcf91-0c76-4720-b118-0ba33527aa92
+		summarizeBy: sum
+		sourceColumn: PrecioUnitarioProducto2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column SubtotalProducto2
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: fc225348-c43a-43b4-9c8e-78a451578ee4
+		summarizeBy: sum
+		sourceColumn: SubtotalProducto2
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column NombreProducto3
+		dataType: string
+		lineageTag: 09b2b38a-6394-4c64-9c76-53e54f3243ef
+		summarizeBy: none
+		sourceColumn: NombreProducto3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column MarcaProducto3
+		dataType: string
+		lineageTag: 5b8d9a0b-8181-4661-a489-ee2ba497c310
+		summarizeBy: none
+		sourceColumn: MarcaProducto3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column CantidadProducto3
+		dataType: double
+		lineageTag: 68508425-ad23-402e-b77b-15b8066b1c63
+		summarizeBy: sum
+		sourceColumn: CantidadProducto3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column PrecioUnitarioProducto3
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: c4f3e489-8512-4eed-893e-aa86af607d10
+		summarizeBy: sum
+		sourceColumn: PrecioUnitarioProducto3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column SubtotalProducto3
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 64eb355c-93f2-4311-9384-b52eb15ce765
+		summarizeBy: sum
+		sourceColumn: SubtotalProducto3
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column DescuentoVenta
+		dataType: double
+		lineageTag: 0ca271b4-69c8-411e-a233-960f026a3fa5
+		summarizeBy: sum
+		sourceColumn: DescuentoVenta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"isGeneralNumber":true}
+
+	column TotalVenta
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: 7cf8d1cd-2e08-428e-9350-d71600fc7d58
+		summarizeBy: sum
+		sourceColumn: TotalVenta
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+		annotation PBI_FormatHint = {"currencyCulture":"en-US"}
+
+	column CiudadSucursal
+		dataType: string
+		lineageTag: 56e5b80f-d8a0-4dbd-8239-b9d65b9a545d
+		summarizeBy: none
+		sourceColumn: CiudadSucursal
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Dia
+		dataType: string
+		lineageTag: f412b95a-ac86-4505-adbe-cfd12f08479b
+		summarizeBy: none
+		sourceColumn: Dia
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Mes
+		dataType: string
+		lineageTag: 6d4b0afa-ed4e-497b-8e5a-6644c0407dc5
+		summarizeBy: none
+		sourceColumn: Mes
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	column Año
+		dataType: string
+		lineageTag: 471b805b-ecfa-4299-8720-c0071b1a499f
+		summarizeBy: none
+		sourceColumn: Año
+
+		changedProperty = IsHidden
+
+		annotation SummarizationSetBy = Automatic
+
+	partition ventas = m
+		mode: import
+		source = ```
+				let
+				    Origen = Csv.Document(File.Contents("C:\Users\julia\Downloads\ventas.csv"),[Delimiter=",", Columns=30, Encoding=65001, QuoteStyle=QuoteStyle.None]),
+				    #"Encabezados promovidos" = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),
+				    #"Nombres de columnas modificados" = Table.RenameColumns(#"Encabezados promovidos",{{"Cliente_Nombre", "ClienteNombre"}, {"edadcliente", "EdadCliente"}, {"Direccion_Cliente", "DireccionCliente"}}),
+				    #"Modificacion tipo de dato" = Table.TransformColumnTypes(#"Nombres de columnas modificados",{{"PrecioUnitarioProducto1", Currency.Type}, {"SubtotalProducto1", Currency.Type}, {"CantidadProducto2", Int64.Type}, {"CantidadProducto1", Int64.Type}, {"EdadCliente", Int64.Type}, {"FechaVenta", type date}, {"HoraVenta", type time}, {"PrecioUnitarioProducto2", Currency.Type}, {"SubtotalProducto2", Currency.Type}, {"CantidadProducto3", Int64.Type}, {"PrecioUnitarioProducto3", Currency.Type}, {"SubtotalProducto3", Currency.Type}, {"DescuentoVenta", Percentage.Type}, {"TotalVenta", Currency.Type}, {"VentaID", Int64.Type}}),
+				    #"Valor reemplazado vacio por ""No especificado"" columna MetodoPago" = Table.ReplaceValue(#"Modificacion tipo de dato","","No especificado",Replacer.ReplaceValue,{"MetodoPago"}),
+				    #"Valor reemplazado null por 0 en CantidadProducto2" = Table.ReplaceValue(#"Valor reemplazado vacio por ""No especificado"" columna MetodoPago",null,0,Replacer.ReplaceValue,{"CantidadProducto2"}),
+				    #"Valor reemplazado null por 0 en CantidadProducto3" = Table.ReplaceValue(#"Valor reemplazado null por 0 en CantidadProducto2",null,0,Replacer.ReplaceValue,{"CantidadProducto3"}),
+				    #"Poner En Mayúsculas Cada Palabra CiudadSucursal" = Table.TransformColumns(#"Valor reemplazado null por 0 en CantidadProducto3",{{"CiudadSucursal", Text.Proper, type text}, {"SucursalNombre", Text.Proper, type text}}),
+				    #"Valor reemplazado Medellin por Medellín en CiudadSucursal" = Table.ReplaceValue(#"Poner En Mayúsculas Cada Palabra CiudadSucursal","Medellin","Medellín",Replacer.ReplaceText,{"CiudadSucursal", "SucursalNombre"}),
+				    #"Valor reemplazado Bogota por Bogotá en CiudadSucursal" = Table.ReplaceValue(#"Valor reemplazado Medellin por Medellín en CiudadSucursal","Bogota","Bogotá",Replacer.ReplaceText,{"CiudadSucursal", "SucursalNombre"}),
+				    #"Valor reemplazado Pereíra por Pereira en CiudadSucursal" = Table.ReplaceValue(#"Valor reemplazado Bogota por Bogotá en CiudadSucursal","Pereíra","Pereira",Replacer.ReplaceText,{"CiudadSucursal", "SucursalNombre"}),
+				    #"Valor reemplazado null por 0 en DescuentoVenta" = Table.ReplaceValue(#"Valor reemplazado Pereíra por Pereira en CiudadSucursal",null,0,Replacer.ReplaceValue,{"DescuentoVenta"}),
+				    #"Tipo cambiado DescuentoVenta" = Table.TransformColumnTypes(#"Valor reemplazado null por 0 en DescuentoVenta",{{"DescuentoVenta", Percentage.Type}}),
+				    #"Valor reemplazado Del por Dell en MarcaProducto" = Table.ReplaceValue(#"Tipo cambiado DescuentoVenta","Del","Dell",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Microsofft por Microsoft en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Del por Dell en MarcaProducto","Microsofft","Microsoft",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado HPP por HP en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Microsofft por Microsoft en MarcaProducto","HPP","HP",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Acr por Acer en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado HPP por HP en MarcaProducto","Acr","Acer",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Aple por Apple en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Acr por Acer en MarcaProducto","Aple","Apple",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Samsng por Samsung en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Aple por Apple en MarcaProducto","Samsng","Samsung",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Azus por Asus en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Samsng por Samsung en MarcaProducto","Azus","Asus",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Delll por Dell en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Azus por Asus en MarcaProducto","Delll","Dell",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado MSY por MSI en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Delll por Dell en MarcaProducto","MSY","MSI",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Lenvo por Lenovo en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado MSY por MSI en MarcaProducto","Lenvo","Lenovo",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Valor reemplazado Razor por Razer en MarcaProducto" = Table.ReplaceValue(#"Valor reemplazado Lenvo por Lenovo en MarcaProducto","Razor","Razer",Replacer.ReplaceText,{"MarcaProducto1", "MarcaProducto2", "MarcaProducto3"}),
+				    #"Personalizada agregada Dia" = Table.AddColumn(#"Valor reemplazado Razor por Razer en MarcaProducto", "Dia", each Date.Day([FechaVenta])),
+				    #"Personalizada agregada Mes" = Table.AddColumn(#"Personalizada agregada Dia", "Mes", each Date.Month([FechaVenta])),
+				    #"Personalizada agregada Año" = Table.AddColumn(#"Personalizada agregada Mes", "Año", each Date.Year([FechaVenta])),
+				    #"Valor reemplazado Bogotá#2 por Bogotá #2" = Table.ReplaceValue(#"Personalizada agregada Año","Techcore Bogotá#2","Techcore Bogotá #2",Replacer.ReplaceText,{"SucursalNombre"}),
+				    #"Valor reemplazado Bogotá#1 por Bogotá #1" = Table.ReplaceValue(#"Valor reemplazado Bogotá#2 por Bogotá #2","Techcore Bogotá#1","Techcore Bogotá #1",Replacer.ReplaceText,{"SucursalNombre"}),
+				    #"Personalizada agregada CiudadNombre2 (sin nulos)" = Table.AddColumn(#"Valor reemplazado Bogotá#1 por Bogotá #1", "CiudadNombre2", each if [CiudadSucursal] <> null and [CiudadSucursal] <> ""
+				then [CiudadSucursal] 
+				else try Text.Split([SucursalNombre], " "){1}
+				otherwise null),
+				    #"Duplicados quitados de VentaID" = Table.Distinct(#"Personalizada agregada CiudadNombre2 (sin nulos)", {"VentaID"}),
+				    #"Columna ""CiudadNombre2"" reordenadas" = Table.ReorderColumns(#"Duplicados quitados de VentaID",{"VentaID", "FechaVenta", "HoraVenta", "SucursalNombre", "CiudadNombre2", "CiudadSucursal", "VendedorNombre", "ClienteNombre", "GeneroCliente", "EdadCliente", "EmailCliente", "TelefonoCliente", "DireccionCliente", "MetodoPago", "NombreProducto1", "MarcaProducto1", "CantidadProducto1", "PrecioUnitarioProducto1", "SubtotalProducto1", "NombreProducto2", "MarcaProducto2", "CantidadProducto2", "PrecioUnitarioProducto2", "SubtotalProducto2", "NombreProducto3", "MarcaProducto3", "CantidadProducto3", "PrecioUnitarioProducto3", "SubtotalProducto3", "DescuentoVenta", "TotalVenta", "Dia", "Mes", "Año"}),
+				    #"Elimino la Columna CiudadSucursal con valores en blanco" = Table.RemoveColumns(#"Columna ""CiudadNombre2"" reordenadas",{"CiudadSucursal"}),
+				    #"Cambio nombre Columna ""CiudadNombre2"" a ""CiudadSucursal""" = Table.RenameColumns(#"Elimino la Columna CiudadSucursal con valores en blanco",{{"CiudadNombre2", "CiudadSucursal"}})
+				in
+				    #"Cambio nombre Columna ""CiudadNombre2"" a ""CiudadSucursal"""
+				```
+
+	annotation PBI_NavigationStepName = Navegación
+
+	annotation PBI_ResultType = Table
+

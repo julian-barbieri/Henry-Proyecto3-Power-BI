@@ -1,0 +1,41 @@
+NombreProducto,MarcaProducto,ingresos_totales,cantidad_vendida,numero_transacciones,precio_promedio
+Acer Aspire 5,Acer,0.0,2496,1672,0.0
+Acer Nitro 5,Acer,0.0,1088,726,0.0
+Acer Predator Helios 300,Acer,0.0,1104,727,0.0
+Acer Swift 3,Acer,0.0,2490,1675,0.0
+Apple MacBook Air M1,Apple,0.0,3246,2174,0.0
+Apple MacBook Pro 14,Apple,0.0,3120,2064,0.0
+Apple MacBook Pro 16,Apple,0.0,2167,1432,0.0
+Apple iMac 24,Apple,0.0,2250,1506,0.0
+Asus ROG Strix G15,Asus,0.0,1647,1096,0.0
+Asus TUF Gaming A15,Asus,0.0,1584,1072,0.0
+Asus VivoBook 15,Asus,0.0,2468,1651,0.0
+Asus ZenBook 14,Asus,0.0,2398,1599,0.0
+Dell Alienware m15,Dell,0.0,3658,2399,0.0
+Dell Inspiron 15,Dell,0.0,3498,2351,0.0
+Dell Latitude 7420,Dell,0.0,4507,3039,0.0
+Dell XPS 13,Dell,0.0,4526,3032,0.0
+HP Envy 13,HP,0.0,3111,2067,0.0
+HP Omen 16,HP,0.0,5011,3328,0.0
+HP Pavilion 15,HP,0.0,4029,2682,0.0
+HP Spectre x360,HP,0.0,7726,5166,0.0
+Lenovo IdeaPad 5,Lenovo,0.0,4970,3309,0.0
+Lenovo Legion 5 Pro,Lenovo,0.0,5861,3905,0.0
+Lenovo ThinkPad X1 Carbon,Lenovo,0.0,5814,3895,0.0
+Lenovo Yoga 7i,Lenovo,0.0,5052,3359,0.0
+MSI GE76 Raider,MSI,0.0,272,183,0.0
+MSI GF65 Thin,MSI,0.0,403,270,0.0
+MSI GS66 Stealth,MSI,0.0,399,269,0.0
+MSI Modern 14,MSI,0.0,300,200,0.0
+Microsoft Surface Book 3,Microsoft,0.0,356,235,0.0
+Microsoft Surface Go 3,Microsoft,0.0,327,217,0.0
+Microsoft Surface Laptop 4,Microsoft,0.0,518,340,0.0
+Microsoft Surface Pro 9,Microsoft,0.0,516,341,0.0
+Razer Blade 15,Razer,0.0,117,75,0.0
+Razer Blade 17,Razer,0.0,131,84,0.0
+Razer Blade Stealth 13,Razer,0.0,124,78,0.0
+Razer Book 13,Razer,0.0,110,71,0.0
+Samsung Galaxy Book Flex,Samsung,0.0,763,521,0.0
+Samsung Galaxy Book Odyssey,Samsung,0.0,541,364,0.0
+Samsung Galaxy Book Pro,Samsung,0.0,779,520,0.0
+Samsung Galaxy Chromebook 2,Samsung,0.0,535,365,0.0

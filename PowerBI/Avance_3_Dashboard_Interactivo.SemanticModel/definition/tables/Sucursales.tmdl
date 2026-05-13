@@ -31,7 +31,7 @@ table Sucursales
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\data\processed\modeloVentas.xlsx"), null, true),
 				    Sucursales_Sheet = Origen{[Item="Sucursales",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Sucursales_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"SucursalID", Int64.Type}, {"SucursalNombre", type text}, {"CiudadID", Int64.Type}})

@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/report/3.2.0/schema.json",
   "themeCollection": {
     "baseTheme": {
-      "name": "CY25SU11",
+      "name": "HenryCorpTheme",
       "reportVersionAtImport": {
         "visual": "2.4.0",
         "report": "3.0.0",
@@ -34,6 +34,13 @@
                 "Value": "false"
               }
             }
+          },
+          "visible": {
+            "expr": {
+              "Literal": {
+                "Value": "true"
+              }
+            }
           }
         }
       }
@@ -45,8 +52,8 @@
       "type": "SharedResources",
       "items": [
         {
-          "name": "CY25SU11",
-          "path": "BaseThemes/CY25SU11.json",
+          "name": "HenryCorpTheme",
+          "path": "BaseThemes/HenryCorpTheme.json",
           "type": "BaseTheme"
         }
       ]

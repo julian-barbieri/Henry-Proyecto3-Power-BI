@@ -3,10 +3,10 @@
   "name": "c9c7acda7c62d1821eba",
   "position": {
     "x": 0,
-    "y": 570,
+    "y": 552,
     "z": 3000,
-    "height": 150,
-    "width": 534,
+    "height": 168,
+    "width": 536,
     "tabOrder": 3000
   },
   "visual": {
@@ -165,6 +165,53 @@
               "expr": {
                 "Literal": {
                   "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "border": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "padding": [
+        {
+          "properties": {
+            "top": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "right": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "bottom": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
+                }
+              }
+            },
+            "left": {
+              "expr": {
+                "Literal": {
+                  "Value": "16D"
                 }
               }
             }

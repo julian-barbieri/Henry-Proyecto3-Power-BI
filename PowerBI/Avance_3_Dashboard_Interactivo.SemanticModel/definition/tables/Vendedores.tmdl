@@ -22,7 +22,7 @@ table Vendedores
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\data\processed\modeloVentas.xlsx"), null, true),
 				    Vendedores_Sheet = Origen{[Item="Vendedores",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Vendedores_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"VendedorID", Int64.Type}, {"Vendedor", type text}})

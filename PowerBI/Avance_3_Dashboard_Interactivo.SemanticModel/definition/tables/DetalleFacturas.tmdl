@@ -68,7 +68,7 @@ table DetalleFacturas
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\data\processed\modeloVentas.xlsx"), null, true),
 				    DetalleFacturas_Sheet = Origen{[Item="DetalleFacturas",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(DetalleFacturas_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"DetalleID", Int64.Type}, {"FacturaID", Int64.Type}, {"ProductoNro", Int64.Type}, {"ProductoID", Int64.Type}, {"Cantidad", Int64.Type}, {"PrecioUnitario", Int64.Type}, {"Subtotal", Int64.Type}})

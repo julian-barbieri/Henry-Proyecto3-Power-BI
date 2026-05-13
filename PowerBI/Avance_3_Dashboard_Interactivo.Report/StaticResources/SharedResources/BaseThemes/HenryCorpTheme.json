@@ -1,0 +1,122 @@
+{
+  "name": "Henry Corp",
+  "dataColors": [
+    "#1E3A5F",
+    "#0D9488",
+    "#6B7280",
+    "#3B82F6",
+    "#14B8A6",
+    "#9CA3AF",
+    "#1D4ED8",
+    "#0F766E",
+    "#374151",
+    "#60A5FA",
+    "#2DD4BF",
+    "#D1D5DB"
+  ],
+  "background": "#F3F4F6",
+  "backgroundLight": "#F9FAFB",
+  "backgroundNeutral": "#E5E7EB",
+  "foreground": "#1E3A5F",
+  "foregroundNeutralSecondary": "#6B7280",
+  "foregroundNeutralTertiary": "#9CA3AF",
+  "tableAccent": "#1E3A5F",
+  "good": "#0D9488",
+  "neutral": "#6B7280",
+  "bad": "#DC2626",
+  "maximum": "#1E3A5F",
+  "center": "#6B7280",
+  "minimum": "#F9FAFB",
+  "null": "#F59E0B",
+  "hyperlink": "#0D9488",
+  "visitedHyperlink": "#0F766E",
+  "textClasses": {
+    "callout": {
+      "fontSize": 28,
+      "fontFace": "DIN",
+      "color": "#1E3A5F"
+    },
+    "title": {
+      "fontSize": 13,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1E3A5F"
+    },
+    "header": {
+      "fontSize": 12,
+      "fontFace": "Segoe UI Semibold",
+      "color": "#1E3A5F"
+    },
+    "label": {
+      "fontSize": 10,
+      "fontFace": "Segoe UI",
+      "color": "#6B7280"
+    }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "wordWrap": [
+          {
+            "show": true
+          }
+        ],
+        "title": [
+          {
+            "titleWrap": true
+          }
+        ],
+        "lineStyles": [
+          {
+            "strokeWidth": 2.5
+          }
+        ],
+        "categoryAxis": [
+          {
+            "gridlineStyle": "dotted",
+            "showAxisTitle": false,
+            "concatenateLabels": false
+          }
+        ],
+        "valueAxis": [
+          {
+            "gridlineStyle": "dotted",
+            "showAxisTitle": false
+          }
+        ],
+        "y2Axis": [
+          {
+            "show": true
+          }
+        ],
+        "outline": [
+          {
+            "transparency": 0
+          }
+        ],
+        "plotArea": [
+          {
+            "transparency": 0
+          }
+        ]
+      }
+    },
+    "card": {
+      "*": {
+        "border": [
+          {
+            "show": false
+          }
+        ]
+      }
+    },
+    "cardVisual": {
+      "*": {
+        "border": [
+          {
+            "show": false
+          }
+        ]
+      }
+    }
+  }
+}

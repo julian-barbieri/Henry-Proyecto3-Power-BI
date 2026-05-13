@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.8.0/schema.json",
-  "name": "d2bd4477cb0cab3e49f8",
+  "name": "056429b50e6df1b1ebd4",
   "position": {
-    "x": 480,
+    "x": 239.2852233676976,
     "y": 0,
-    "z": 10000,
-    "height": 96,
-    "width": 208,
-    "tabOrder": 10000
+    "z": 10001,
+    "height": 95.010309278350519,
+    "width": 209.37457044673539,
+    "tabOrder": 10001
   },
   "visual": {
     "visualType": "cardVisual",
@@ -23,11 +23,11 @@
                       "Entity": "Metricas"
                     }
                   },
-                  "Property": "Cantidad Vendida"
+                  "Property": "Ticket Promedio"
                 }
               },
-              "queryRef": "Metricas.Cantidad Vendida",
-              "nativeQueryRef": "Cantidad Vendida"
+              "queryRef": "Metricas.Ticket Promedio",
+              "nativeQueryRef": "Ticket Promedio"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Metricas"
                   }
                 },
-                "Property": "Cantidad Vendida"
+                "Property": "Ticket Promedio"
               }
             },
             "direction": "Descending"
@@ -114,23 +114,5 @@
       ]
     },
     "drillFilterOtherVisuals": true
-  },
-  "filterConfig": {
-    "filters": [
-      {
-        "name": "af8b435c5c3e5dd86e78",
-        "field": {
-          "Measure": {
-            "Expression": {
-              "SourceRef": {
-                "Entity": "Metricas"
-              }
-            },
-            "Property": "Cantidad Vendida"
-          }
-        },
-        "type": "Advanced"
-      }
-    ]
   }
 }

@@ -110,14 +110,12 @@ table Facturas
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\data\processed\modeloVentas.xlsx"), null, true),
 				    Facturas_Sheet = Origen{[Item="Facturas",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Facturas_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"FacturaID", Int64.Type}, {"Dia", Int64.Type}, {"Mes", type text}, {"Anio", Int64.Type}, {"HoraVenta", type datetime}, {"MetodoPago", type text}, {"SucursalID", Int64.Type}, {"VendedorID", Int64.Type}, {"ClienteID", Int64.Type}, {"DescuentoVenta", Percentage.Type}, {"TotalVenta", Currency.Type}})
 				in
 				    #"Tipo cambiado"
-
-	changedProperty = Name
 
 	annotation PBI_ResultType = Table
 

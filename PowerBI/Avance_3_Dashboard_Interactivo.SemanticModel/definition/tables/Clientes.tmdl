@@ -63,7 +63,7 @@ table Clientes
 		mode: import
 		source =
 				let
-				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\modeloVentas.xlsx"), null, true),
+				    Origen = Excel.Workbook(File.Contents("C:\Users\julia\Data Science\ProyectoM3_JulianBarbieri\data\processed\modeloVentas.xlsx"), null, true),
 				    Clientes_Sheet = Origen{[Item="Clientes",Kind="Sheet"]}[Data],
 				    #"Encabezados promovidos" = Table.PromoteHeaders(Clientes_Sheet, [PromoteAllScalars=true]),
 				    #"Tipo cambiado" = Table.TransformColumnTypes(#"Encabezados promovidos",{{"ClienteID", Int64.Type}, {"ClienteNombre", type text}, {"GeneroCliente", type text}, {"EdadCliente", Int64.Type}, {"EmailCliente", type text}, {"TelefonoCliente", type text}, {"DireccionCliente", type text}})
